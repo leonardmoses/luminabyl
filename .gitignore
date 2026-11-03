@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +40,28 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# secrets / keys
+*.key
+*.p12
+*.pfx
+service-account*.json
+
+# supabase CLI local state
+supabase/.branches
+supabase/.temp
+supabase/.env
+
+# logs
+*.log
+
+# editors / OS / sync
+.idea
+.vscode/*
+!.vscode/extensions.json
+Thumbs.db
+.dropbox
+.dropbox.attr
+
+# claude code local settings
+.claude/settings.local.json
