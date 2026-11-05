@@ -21,7 +21,7 @@ Scaffolded the Luminabyl Next.js boilerplate (JS + Tailwind + Supabase helpers) 
 - [x] Portable memory: `CLAUDE.md` + `claude-portable/` created
 - [ ] **DNS update recommended by Vercel** (optional; legacy values still work): A `@` → `216.198.79.1`; CNAME `www` → `19d52d5bd5cd5efb.vercel-dns-017.com`. User was given steps; not yet confirmed done.
 - [ ] Set Vercel env var `NEXT_PUBLIC_SITE_URL=https://www.luminabyl.com`, then redeploy (not yet confirmed)
-- [ ] Verify GitHub → Vercel auto-deploy on push (repo was connected after the first push, so it hasn't been tested yet)
+- [x] GitHub → Vercel auto-deploy verified (commit `7e07abf` deployed automatically to production)
 
 ## Decisions
 - JavaScript, not TypeScript — user preference.
@@ -33,7 +33,7 @@ Scaffolded the Luminabyl Next.js boilerplate (JS + Tailwind + Supabase helpers) 
 
 ## Next steps
 1. Confirm the Porkbun DNS update to Vercel's new records, then verify with `dig`.
-2. Commit + push (this also tests auto-deploy).
+2. (done) Commit + push; auto-deploy verified.
 3. Supabase: choose or create a project (the connected Supabase MCP shows an existing project "bindtech-toolbox"; do not touch it without permission), then add env vars locally and in Vercel. Set Auth → URL Configuration: Site URL `https://www.luminabyl.com`, redirect URLs for localhost and Vercel previews.
 4. Payments: likely Stripe Checkout, pending the user's answer.
 5. Apply the user's page design details when provided.
