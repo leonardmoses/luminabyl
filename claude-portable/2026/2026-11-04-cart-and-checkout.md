@@ -1,7 +1,7 @@
 # Shopping cart and checkout
 
 - **Date started:** 2026-11-04
-- **Last updated:** 2026-11-04
+- **Last updated:** 2026-11-05
 - **Machine:** Xavier
 - **File:** claude-portable/2026/2026-11-04-cart-and-checkout.md
 
@@ -33,3 +33,4 @@ User wants a shopping cart (add to cart → checkout → enter payment info). Th
 ## Log
 - 2026-11-04 — Read prior session; listed requirements for cart + checkout for the user.
 - 2026-11-04 — Committed and pushed session memory updates to `main` (no code changes yet).
+- 2026-11-05 — User created a Stripe account (Stripe chosen). Created a git-ignored `.env.local` on Xavier with empty Stripe/Supabase slots for the user to fill in. Gave the user the list of Stripe dashboard settings to check: Sandbox API keys, business/public details, statement descriptor, branding, payment methods, tax.
