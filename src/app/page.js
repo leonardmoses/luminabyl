@@ -1,13 +1,21 @@
 import Image from "next/image";
+import HandmadeDisclaimer from "@/components/HandmadeDisclaimer";
 import ProductCard from "@/components/ProductCard";
 import Sparkle, { Ornament } from "@/components/Sparkle";
 import { products } from "@/lib/products";
 
-// Copy on this page is placeholder text in the brand's voice; replace with final wording.
+// Hero and promises copy is placeholder text in the brand's voice.
+// The story and custom-orders copy is the owner's own wording.
 const promises = [
-  { title: "Hand-poured", text: "Every candle is poured and finished by hand." },
+  { title: "Handmade", text: "Every candle and soap is made by hand, from scratch." },
   { title: "Small batches", text: "Made in limited runs, so each one gets attention." },
   { title: "Made to gift", text: "Pretty enough to give, lovely to keep for yourself." },
+];
+
+const curing = [
+  { name: "Cold-process soaps", time: "4–6 weeks" },
+  { name: "Hot-process soaps", time: "2–4 weeks" },
+  { name: "Hand-poured candles", time: "7–10 days" },
 ];
 
 export default function Home() {
@@ -26,7 +34,7 @@ export default function Home() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24">
           <div className="text-center md:text-left">
             <p className="text-xs uppercase tracking-[0.3em] text-gold-dark">
-              Hand-poured candles
+              Handmade candles &amp; soaps
             </p>
             <h1 className="mt-5 font-display text-5xl leading-[1.05] sm:text-6xl">
               Little moments of <em className="text-gold-sheen">light</em>, made by hand.
@@ -92,6 +100,7 @@ export default function Home() {
             <ProductCard key={product.slug} {...product} />
           ))}
         </div>
+        <HandmadeDisclaimer className="mt-20" />
       </section>
 
       {/* Story */}
@@ -111,16 +120,78 @@ export default function Home() {
           <div className="text-center md:text-left">
             <p className="text-xs uppercase tracking-[0.3em] text-gold-dark">Our story</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl">
-              Made slowly, <em>with love</em>
+              From my heart <em>and home</em>
             </h2>
+            {/* Owner-supplied copy. */}
             <p className="mt-6 leading-relaxed text-foreground/80">
-              Lumina by L began with a love of soft light and pretty details.
-              Each candle is designed like a little dessert or bouquet, then
-              poured and decorated by hand, one at a time.
+              When I’m not caring for patients as a nurse or guiding my two
+              amazing kids, ages 16 and 19, into adulthood, you can find me
+              pouring small batches of clean, natural candles and soaps. This
+              business grew out of my heart and home because, as both a
+              healthcare worker and a mother focused on educating her children
+              about mindful choices, keeping our spaces and bodies safe. Every
+              single ingredient is carefully chosen to bring a little bit of
+              comfort, warmth, and clean wellness into your family&apos;s daily
+              routines.
             </p>
-            <p className="mt-4 leading-relaxed text-foreground/80">
-              Placeholder: tell customers who L is, what inspires each
-              collection, and what the candles are made from.
+          </div>
+        </div>
+      </section>
+
+      {/* Seasonal & custom orders (owner-supplied copy) */}
+      <section id="custom" className="scroll-mt-28 bg-sage-light">
+        <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 md:py-28">
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-[0.3em] text-gold-dark">
+              Seasonal &amp; custom orders
+            </p>
+            <h2 className="mt-4 font-display text-4xl sm:text-5xl">
+              Made <em>just for you</em>
+            </h2>
+            <Ornament className="mt-6" />
+            <p className="mx-auto mt-8 max-w-3xl leading-relaxed text-foreground/80">
+              Alongside some classic collection, I love the magic of changing
+              seasons with our specially crafted seasonal items. I am also
+              always happy to take custom orders, tailoring scents,
+              ingredients, and designs to create perfectly personalized soaps
+              and candles for your special occasions or gifts. Because
+              everything is handmade completely from scratch using natural
+              methods, please keep the following curing timelines in mind so
+              we can plan your custom orders perfectly (I&apos;ll make sure we
+              factor these exact wait times into all our future scheduling for
+              your batches!):
+            </p>
+          </div>
+
+          <ul className="mt-12 grid gap-5 sm:grid-cols-3">
+            {curing.map((item) => (
+              <li
+                key={item.name}
+                className="rounded-3xl border border-gold/40 bg-background px-6 py-8 text-center"
+              >
+                <Sparkle className="mx-auto h-3.5 w-3.5 text-gold" />
+                <p className="mt-3 font-display text-2xl">{item.name}</p>
+                <p className="mt-2 font-display text-3xl italic text-gold-dark">
+                  {item.time}
+                </p>
+                <p className="mt-1 text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                  curing time
+                </p>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mx-auto mt-12 max-w-3xl space-y-5 text-center leading-relaxed text-foreground/80">
+            <p>
+              The longer the cure time, the better the soap quality and
+              longer-lasting bars. If you need a fast turnaround for a
+              last-minute gift or event, we can also design personalized soaps
+              using a clean, shea butter melt-and-pour soap base, which is
+              ready for quick delivery with no curing wait time required!
+            </p>
+            <p className="font-display text-2xl italic text-foreground">
+              Please feel free to send me a message anytime to get a custom
+              quote and start designing your perfect personalized batch.
             </p>
           </div>
         </div>

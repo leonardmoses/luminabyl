@@ -22,11 +22,11 @@ export const metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "https://www.luminabyl.com",
   ),
   title: {
-    default: "Lumina by L — Hand-poured candles",
+    default: "Lumina by L — Handmade candles & soaps",
     template: "%s | Lumina by L",
   },
   description:
-    "Lumina by L: hand-poured decorative candles, made in small batches.",
+    "Lumina by L: clean, natural handmade candles and soaps, made in small batches. Seasonal collections and custom orders.",
 };
 
 export default function RootLayout({ children }) {

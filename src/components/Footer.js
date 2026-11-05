@@ -7,13 +7,13 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 text-sm sm:grid-cols-3 sm:px-6">
         <div>
           <p className="font-display text-3xl">Lumina by L</p>
-          <p className="mt-2 text-foreground/75">Hand-poured candles, made with love.</p>
+          <p className="mt-2 text-foreground/75">Handmade candles &amp; soaps, made with love.</p>
         </div>
         <div>
           <p className="text-xs uppercase tracking-[0.25em] text-gold-dark">Shop</p>
           <ul className="mt-3 space-y-2 text-foreground/80">
             <li><Link href="/#shop" className="hover:text-foreground">All candles</Link></li>
-            <li>Gift sets</li>
+            <li><Link href="/#custom" className="hover:text-foreground">Custom orders</Link></li>
             <li>Seasonal</li>
           </ul>
         </div>

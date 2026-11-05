@@ -4,7 +4,7 @@ import Link from "next/link";
 const navLinks = [
   { href: "/#shop", label: "Shop" },
   { href: "/#story", label: "Our story" },
-  { href: "/#newsletter", label: "Contact" },
+  { href: "/#custom", label: "Custom orders" },
 ];
 
 export default function Header() {
